@@ -176,3 +176,18 @@ CMD ["redis-server"]
 ##### To build an image with a tag follow the below command
 #### Command: *docker build -t <docker_id/><repo/project_name:latest>  .*
 #### Example: *docker build -t azmul/redis:latest .*
+
+## Project outline making a real project
+##### Now we will make a nodejs web app into a docker container and will run from a browser. 
+
+#### Steps are
+> 1. Create nodejs web app
+
+> 2. Create a Dockerfile
+
+> 3. Build image from Dockerfile
+
+>4. Run image from container
+
+> 5. Connect to web app from a container
+

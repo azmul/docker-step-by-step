@@ -32,11 +32,6 @@ d87a911122f1a86d23de1c1eadc8d2b3b622f18f8fe7b0635c2b5949b01948f8
 ##### Example: *docker create -a d87a911122f1a86d23de1c1eadc8d2b3b622f18f8fe7b0635c2b5949b01948f8*
 ##### Output:
 ```
-Unable to find image 'hello-world:latest' locally
-latest: Pulling from library/hello-world
-1b930d010525: Pull complete
-Digest: sha256:2557e3c07ed1e38f26e389462d03ed943586f744621577a99efb77324b0fe535
-Status: Downloaded newer image for hello-world:latest
 d87a911122f1a86d23de1c1eadc8d2b3b622f18f8fe7b0635c2b5949b01948f8
 ```
 ### We can overide default command
@@ -56,3 +51,12 @@ tmp
 usr
 var*
 
+### Containers command
+#### To check all containers
+#### Command: *docker ps --all*
+#### Output: 
+```
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS                         PORTS                    NAMES
+c6f1310d15f4        busybox               "ls"                     24 minutes ago      Exited (0) 24 minutes ago                               thirsty_dijkstra
+d87a911122f1        hello-world           "/hello"                 32 minutes ago      Exited (0) 28 minutes ago                               reverent_feiste
+```

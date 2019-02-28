@@ -52,11 +52,37 @@ usr
 var*
 
 ### Containers command
-#### To check all containers
+#### To check list all containers ever created
 #### Command: *docker ps --all*
 #### Output: 
 ```
 CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS                         PORTS                    NAMES
 c6f1310d15f4        busybox               "ls"                     24 minutes ago      Exited (0) 24 minutes ago                               thirsty_dijkstra
 d87a911122f1        hello-world           "/hello"                 32 minutes ago      Exited (0) 28 minutes ago                               reverent_feiste
+```
+#### To check all running containers
+#### Command: *docker ps*
+#### Removing stopped containers
+#### Command: *docker system prune*
+#### Retrieving log outputs
+#### Command: *docker logs <container_id>*
+#### Stopping containers
+#### Command: *docker stop <container_id>* [Take 10 second to stop terminal signal]
+#### Command: *docker kill <container_id>* [Instanlly kill terminal signal]
+
+### Execute an additional command in a container
+#### Command: *docker exec -it <container_id> command*
+>docker [reference to the docker client]
+
+>exec [runs another command]
+
+>-it [allows us to provide input to the container]
+
+>container_id [id of container]
+
+>command [command to execute]
+#### Example: *docker exec -it 60d8b59809e7 redis-cli*
+#### Output
+```
+127.0.0.1:6379>
 ```

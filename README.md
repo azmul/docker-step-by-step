@@ -1,7 +1,38 @@
 # Docker Beginner Tutorial Step by Step
 
-## Check docker version
+## Why use docker ?
+##### Docker makes it really easy to install and run software without worring about setup and dependencies.
+## Docker Ecosystem
+> [Docker Client] [Docker Server] [Docker machine] [Docker images] [Docker Hub] [Docker Compose]
+##### Docker is a platform or ecosystem around creating and running containers.
+##### [Note: *When runnig docker in my computer technically running Linux virtual machine in my computer*]
+## What is container and images ?
+##### Image is a single file with all the dependencies and config required to run a program.
+##### Container is instance of an image runs a program.
+##### [Note: *Docker cli and Docker hub combines download Image*]
+## Check docker version of your computer
 #### Command: docker version
+#### Output:
+```
+Client: Docker Engine - Community
+ Version:           18.09.2
+ API version:       1.39
+ Go version:        go1.10.8
+ Git commit:        6247962
+ Built:             Sun Feb 10 04:12:39 2019
+ OS/Arch:           darwin/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          18.09.2
+  API version:      1.39 (minimum version 1.12)
+  Go version:       go1.10.6
+  Git commit:       6247962
+  Built:            Sun Feb 10 04:13:06 2019
+  OS/Arch:          linux/amd64
+  Experimental:     true
+```
 
 ## Install image
 #### Command: *docker run <image_name>*
@@ -14,6 +45,8 @@ latest: Pulling from library/busybox
 Digest: sha256:061ca9704a714ee3e8b80523ec720c64f6209ad3f97c0ff7cb9ec7d19f15149f
 Status: Downloaded newer image for busybox:latest
 ```
+##### [Note: *To generate this image docker took the following steps*]
+> [Docker Client] -> [Docker Server] -> [Image Cache] if not found then pull the *busybox* image from the docker hub 
 ##### docker run command can be divided into two parts
 *docker run = docker create + docker start*
 ##### docker create = docker create <image_name>
@@ -64,10 +97,12 @@ d87a911122f1        hello-world           "/hello"                 32 minutes ag
 ```
 ### To check all running containers
 #### Command: *docker ps*
-### Removing stopped containers
+### Remove all stopped containers
 #### Command: *docker system prune*
 ### Retrieving log outputs
 #### Command: *docker logs <container_id>*
+### Remove a  containers
+#### Command: *docker rm <container_id>*
 ### Stopping containers
 #### Command: *docker stop <container_id>* [Take 10 second to stop terminal signal]
 #### Command: *docker kill <container_id>* [Instanlly kill terminal signal]

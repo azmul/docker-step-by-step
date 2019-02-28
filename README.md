@@ -157,7 +157,9 @@ FROM alpine
 RUN apk add --update redis
 CMD ["redis-server"]
 ```
-Here details are
+#### Here details are
+
+
 | Instruction telling Docker server what to do        | Argument to the instruction           | Description  |
 | ------------- |:-------------:| -----:|
 | FROM      | alpine | use an existing docker image as base |

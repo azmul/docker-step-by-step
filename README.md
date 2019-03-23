@@ -2,10 +2,20 @@
 
 ## Why use docker ?
 ##### Docker makes it really easy to install and run software without worring about setup and dependencies.
+## How to download docker ?
+#### Steps
+>1. Sign up for a docker hub account from [docker.com](https://www.docker.com/)
+
+>2. Download and install docker for Mac/Windows
+
+>3. Login to docker
+
+>4. Verify docker installation
+
 ## Docker Ecosystem
 > [Docker Client] [Docker Server] [Docker machine] [Docker images] [Docker Hub] [Docker Compose]
 ##### Docker is a platform or ecosystem around creating and running containers.
-##### [Note: *When runnig docker in my computer technically running Linux virtual machine in my computer*]
+##### [Note: *When runnig docker in your computer technically running Linux virtual machine in your computer*]
 ## What is container and images ?
 ##### Image is a single file with all the dependencies and config required to run a program.
 ##### Container is instance of an image runs a program.
@@ -169,13 +179,15 @@ CMD ["redis-server"]
 #### To build this image run command is: *docker build .*
 #### To run this image command is: *docker run <container_id>*
 
-### Rebuilds with cache
-##### [Note: *When we add some new instruction in a docker file docker download new dependency according to new instruction and takes other with cache. if we change docker instruction from upper and bottom then docker download all dependency newly*]
 
 ## Tagging an image
 ##### To build an image with a tag follow the below command
 #### Command: *docker build -t <docker_id/><repo/project_name:latest>  .*
 #### Example: *docker build -t azmul/redis:latest .*
+
+
+### Rebuilds with cache
+##### [Note: *When we add some new instruction in a docker file docker download new dependency according to new instruction and takes other with cache. if we change docker instruction from upper and bottom then docker download all dependency newly*]
 
 ## Project outline making a real project
 ##### Now we will make a nodejs web app into a docker container and will run from a browser. 
